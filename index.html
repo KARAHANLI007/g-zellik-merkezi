@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doğal Güzellik Merkezi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Doğal Güzellik</div>
+    <nav>
+      <a href="#home">Anasayfa</a>
+      <a href="#services">Hizmetler</a>
+      <a href="#about">Hakkımızda</a>
+      <a href="#appointment">Randevu</a>
+      <a href="#contact">İletişim</a>
+      <button onclick="openModal()">Giriş / Kayıt</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Doğal Güzelliğinizi Keşfedin</h1>
+    <p>Doğadan ilham alan bakım ve yenilenme deneyimi</p>
+    <a href="#appointment" class="cta">Randevu Al</a>
+  </section>
+
+  <section id="services">
+    <h2>Hizmetlerimiz</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/ciltbakımı.jpg" alt="Cilt Bakımı">
+        <div class="card-content">
+          <h3>Cilt Bakımı</h3>
+          <p>Canlı ve parlak bir cilt için doğal içeriklerle yapılan profesyonel cilt bakımı.</p>
+        </div>
+      </div>
+  
+      <div class="service-card">
+        <img src="images/masaj.jpg" alt="Masaj Terapisi">
+        <div class="card-content">
+          <h3>Masaj Terapisi</h3>
+          <p>Vücudunuzu rahatlatan, stresinizi azaltan yenileyici masaj seansları.</p>
+        </div>
+      </div>
+  
+      <div class="service-card">
+        <img src="images/manikür.jpg" alt="Manikür & Pedikür">
+        <div class="card-content">
+          <h3>Manikür & Pedikür</h3>
+          <p>El ve ayak bakımında hijyenik, estetik ve rahatlatıcı çözümler.</p>
+        </div>
+      </div>
+  
+      <div class="service-card">
+        <img src="images/sacbakımı.jpg" alt="Saç Bakımı">
+        <div class="card-content">
+          <h3>Saç Bakımı</h3>
+          <p>Saç tipinize özel besleyici bakımlar ve stil önerileri ile dönüşüm yaşayın.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Hakkımızda</h2>
+    <p>
+        Güzelliğinizi ve sağlığınızı önemsiyoruz.
+        Merkezimizde, alanında uzman ve deneyimli ekip arkadaşlarımızla, size özel bakım ve çözümler sunuyoruz. Modern tekniklerle desteklenen, doğallığı ve kaliteyi ön planda tutan hizmet anlayışımızla, kendinizi evinizde hissedeceksiniz.
+        
+        Her müşterimizin kendine özgü güzelliği olduğuna inanıyoruz. Bu nedenle kişiye özel danışmanlıkla ihtiyaçlarınızı dikkatle dinliyor, en uygun uygulamaları öneriyoruz. Rahatlatıcı atmosferimizde, hem bedeninizi hem de ruhunuzu yenilemek için yanınızdayız.
+        
+        Siz değerli müşterilerimize en iyi deneyimi yaşatmak için çalışıyoruz.
+        Güzellik yolculuğunuzda size eşlik etmekten mutluluk duyuyor, sağlıklı ve ışıldayan bir görünüm için en son trendleri ve teknolojileri sunmayı amaçlıyoruz.
+    </p>
+  </section>
+
+  <section id="appointment">
+    <h2>Randevu Takvimi</h2>
+    
+    <div class="calendar">
+      <div class="month">
+        <button id="prevMonth">&lt;</button>
+        <span id="monthYear"></span>
+        <button id="nextMonth">&gt;</button>
+      </div>
+      <div class="weekdays">
+        <div>Pzt</div>
+        <div>Sal</div>
+        <div>Çar</div>
+        <div>Per</div>
+        <div>Cuma</div>
+        <div>Cts</div>
+        <div>Paz</div>
+      </div>
+      <div class="days" id="daysGrid">
+        <!-- Günler JS ile gelecek -->
+      </div>
+    </div>
+  
+    <h3>Randevu Al</h3>
+    <form id="appointmentForm">
+      <input type="text" placeholder="Ad Soyad" required />
+      <input type="tel" placeholder="Telefon" required />
+      <input type="time" required />
+      <select required>
+        <option disabled selected>Hizmet Seçiniz</option>
+        <option>Cilt Bakımı</option>
+        <option>Masaj Terapisi</option>
+        <option>Manikür</option>
+      </select>
+      <button type="submit">Randevu Al</button>
+    </form>
+  </section>
+  
+
+<!-- Header'daki giriş/kayıt butonu -->
+<button onclick="openModal()">Giriş / Kayıt</button>
+
+<!-- Modal içerisi -->
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <h2>Giriş Yap / Kayıt Ol</h2>
+      <form>
+        <input type="email" placeholder="E-posta" required>
+        <input type="password" placeholder="Şifre" required>
+        <button type="submit">Giriş Yap</button>
+        <button type="submit" class="secondary">Kayıt Ol</button>
+      </form>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
