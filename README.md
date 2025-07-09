@@ -1,1 +1,1 @@
-# g-zellik-merkezi
+# güzellik-merkezi
